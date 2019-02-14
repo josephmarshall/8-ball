@@ -14,7 +14,12 @@ class Answers
                     "most likely",
                     "very doubtful",
                     "somewhat likely",
-                    "45% of the time it happens everytime"
+                    "45% of the time it happens everytime",
+                    "you wish",
+                    "highly unlikely",
+                    "certainly",
+                    "most probably",
+                    "there's a chance"
                     ]
     end
 
