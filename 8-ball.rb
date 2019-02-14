@@ -21,7 +21,7 @@ class Answers
     def addResponse(responses)
         response = gets.strip
         if responses.include? response
-         #do nothing
+         puts "I already know that answer"
         else
         return response
         end
@@ -42,15 +42,18 @@ class Magic8ball
     def self.userInput
         input = gets.strip
         case input
-            when "add_answer"
+            when "add_answer", "add", "a"
             # easter egg "add_answers"
-            @answers.responses << @answers.addResponse(@answers.responses)
-            when "reset_answers"
-            # easter egg "reset_answers"
-            @answers = @answers.resetResponses
-            when "print_answers"
-            # easter egg "print_answers"
-            @answers.printAnswers(@answers.responses)
+                response = @answers.addResponse(@answers.responses)
+                if response != nil
+                @answers.responses << response
+                end
+            when "reset_answers", "reset", "r"
+                # easter egg "reset_answers"
+                @answers = @answers.resetResponses
+            when "print_answers", "print", "p"
+                # easter egg "print_answers"
+                @answers.printAnswers(@answers.responses)
             when "q", "QUIT", "quit", "exit"
                 puts "ask again any time!"
                 exit
