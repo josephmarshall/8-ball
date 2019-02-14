@@ -57,7 +57,11 @@ class Magic8ball
             when "q", "QUIT", "quit", "exit"
                 puts "ask again any time!"
                 exit
+            when 42
+                puts "What is the answer to the ultimate 
+                question of life, the universe, and everything?"
             else
+            
             answer
         end
         main
