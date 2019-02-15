@@ -1,8 +1,8 @@
 class Answers
 
-    attr_accessor :responses
+    attr_accessor :responses, :array
 
-    def initialize
+    def initialize(array)
         @responses = ["yes",
                     "no",
                     "maybe",
@@ -19,6 +19,7 @@ class Answers
                     "most probably",
                     "there's a chance"
                     ]
+        @array = array
     end
 
     def addResponse(responses)
@@ -39,5 +40,12 @@ class Answers
     end
 
 end
+
+a = Answers.new(testArray)
+puts a.array
+a.responses << a.addResponse(a.responses)
+puts a.responses
+puts 
+puts a.test1(testArray2)
 
 #some stuff
