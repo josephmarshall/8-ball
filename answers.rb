@@ -51,4 +51,8 @@ puts a.test1(testArray2)
 #some stuff
 #some more stuff
 #some extra stuff
+<<<<<<< HEAD
 #some extra extra stuff
+=======
+#additional things
+>>>>>>> feature1
