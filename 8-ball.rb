@@ -1,23 +1,12 @@
 require 'colorize'
+require 'io/console'
 require_relative 'answers'
 require_relative 'letters'
-class String
-    def letters(on, delay)
-        if on
-        delay = delay
-        else
-        delay = 0
-        end
-            letters = self.split("")
-            letters.each do |l| print l
-            sleep(delay)
-            end
-    end
-end
 
 class Magic8ball
 
     def self.userInput
+        #IO::console.iflush
         input = gets.strip
         case input
             when "toggle mode", "mode", "t"
@@ -64,10 +53,6 @@ class Magic8ball
         puts "-----------------"
         puts "press enter"
         gets
-    end
-
-    def self.addAnswer
-    # check for same answer
     end
 
     @answers = Answers.new
